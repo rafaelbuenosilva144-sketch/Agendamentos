@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- FORMULÁRIO PRINCIPAL -->
+  <title>Agendamento de Serviços - Rebecca Studio de Beleza</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app-background">
+    <div class="glow-shape shape-1"></div>
+    <div class="glow-shape shape-2"></div>
+  </div>
+
+  <main class="card3d">
+    
+    <h1>Agende seu Horário</h1>
+
+    <form id="bookingForm">
+
+       <!-- BOTÃO PARA ABRIR A SELEÇÃO DE SERVIÇOS -->
+      <div class="form-section-card">
+        <label class="required-label">Serviços Selecionados:</label>
+        <button type="button" id="btnOpenServices" class="btn-select-services">
+          Escolher Serviços ➔
+        </button>
+        <div id="selectedServicesList" class="selected-preview">Nenhum serviço selecionado</div>
+      </div>
+
+      <div id="servicesModal" class="services-modal hidden">
+        <div class="modal-content">
+          <h2>Selecione os Serviços</h2>
+
+           <!-- MODAL DE SELEÇÃO DE SERVIÇOS (FICA ESCONDIDO ATÉ CLICAR) -->
+          <p class="category-title">SERVIÇOS DE UNHAS</p>
+          <div class="services-group">
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Alongamento na Fibra de Vidro|160">
+              <span class="service-info">
+                <strong class="service-name">Alongamento na Fibra de Vidro</strong>
+                <span class="service-price">R$ 160,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Alongamento no Molde F1|140">
+              <span class="service-info">
+                <strong class="service-name">Alongamento no Molde F1</strong>
+                <span class="service-price">R$ 140,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Postiça Realista|100">
+              <span class="service-info">
+                <strong class="service-name">Postiça Realista</strong>
+                <span class="service-price">R$ 100,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Banho em Gel|80">
+              <span class="service-info">
+                <strong class="service-name">Banho em Gel</strong>
+                <span class="service-price">R$ 80,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Esmaltação em Gel|60">
+              <span class="service-info">
+                <strong class="service-name">Esmaltação em Gel</strong>
+                <span class="service-price">R$ 60,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Mão e Pé Tradicional|50">
+              <span class="service-info">
+                <strong class="service-name">Mão e Pé Tradicional</strong>
+                <span class="service-price">R$ 50,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Pé ou Mão Tradicional|30">
+              <span class="service-info">
+                <strong class="service-name">Pé ou Mão Tradicional</strong>
+                <span class="service-price">R$ 30,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Spa dos Pés|60">
+              <span class="service-info">
+                <strong class="service-name">Spa dos Pés</strong>
+                <span class="service-price">R$ 60,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Manutenção (25-30 dias)|80">
+              <span class="service-info">
+                <strong class="service-name">Manutenção (25-30 dias)</strong>
+                <span class="service-price">R$ 80,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Manutenção (+30 dias)|90">
+              <span class="service-info">
+                <strong class="service-name">Manutenção (+30 dias)</strong>
+                <span class="service-price">R$ 90,00</span>
+              </span>
+            </label>
+          </div>
+
+          <p class="category-title">OUTROS SERVIÇOS</p>
+          <div class="services-group">
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Escova de cabelo|30">
+              <span class="service-info">
+                <strong class="service-name">Escova de cabelo</strong>
+                <span class="service-price">R$ 30,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Penteado (Sob Consulta)|30">
+              <span class="service-info">
+                <strong class="service-name">Penteado</strong>
+                <span class="service-price">R$ 30,00 a R$ 100,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Sobrancelha sem henna|20">
+              <span class="service-info">
+                <strong class="service-name">Sobrancelha sem henna</strong>
+                <span class="service-price">R$ 20,00</span>
+              </span>
+            </label>
+
+            <label class="service-option">
+              <input type="checkbox" name="services" value="Sobrancelha com henna|35">
+              <span class="service-info">
+                <strong class="service-name">Sobrancelha com henna</strong>
+                <span class="service-price">R$ 35,00</span>
+              </span>
+            </label>
+          </div>
+
+          <button type="button" id="btnCloseServices" class="btn-confirm-services">
+            Confirmar Serviços
+          </button>
+        </div>
+      </div>
+
+      <!-- DADOS DO CLIENTE -->
+      <div class="form-section-card">
+        <h3 class="section-title">Dados do Cliente</h3>
+        
+        <div class="field-group">
+          <label for="clientName" class="required-label">Seu Nome Completo:</label>
+          <input type="text" id="clientName" name="clientName" autocomplete="name" placeholder="Digite seu nome" required>
+        </div>
+
+        <div class="field-group">
+          <label for="clientPhone" class="required-label">Telefone / WhatsApp:</label>
+          <input type="tel" id="clientPhone" name="clientPhone" autocomplete="tel" placeholder="(00) 00000-0000" maxlength="15" required>
+        </div>
+
+        <div class="field-group">
+          <label for="clientEmail" class="required-label">E-mail:</label>
+          <input type="email" id="clientEmail" name="clientEmail" autocomplete="email" placeholder="seuemail@gmail.com" required>
+        </div>
+
+        <div class="field-group">
+          <label for="birthDate" class="required-label">Data de Nascimento:</label>
+          <input type="text" id="birthDate" name="birthDate" placeholder="DD/MM/AAAA" maxlength="10" required>
+        </div>
+      </div>
+
+      <div class="form-section-card">
+        <h3 class="section-title">Data e Horário</h3>
+
+        <div class="field-group">
+          <label for="date" class="required-label">Data do Agendamento:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="homeService" value="5">
+          <label for="homeService">Atendimento em Domicílio + R$ 5,00</label>
+        </div>
+
+        <div class="field-group">
+          <label for="time" class="required-label">Horário Disponível:</label>
+          <input type="hidden" id="time" name="time" required>
+          <div id="timeSlotsContainer" class="time-slots-grid">
+            <p class="time-placeholder">Selecione a data primeiro...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section-card highlight-card">
+        <div class="price-box">
+          <span>Total a Pagar:</span>
+          <strong id="totalPrice">R$ 0,00</strong>
+        </div>
+
+        <!-- BOTÃO DE ENVIAR FORMULÁRIO -->
+        <button type="button" id="btnWhatsApp" class="btn-3d">
+          <span id="btnText">Agendar Agora</span>
+        </button>
+      </div>
+
+    </form>
+
+  </main>
+
+  <footer class="footer-block">
+    <p>Rebecca Studio de Beleza &copy; - 2026</p>
+    <p class="footer-subtext">Todos os Direitos Reservados</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

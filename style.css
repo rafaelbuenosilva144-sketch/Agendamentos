@@ -1,0 +1,383 @@
+/* CONFIGURAÇÕES GERAIS E TIPOGRAFIA BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  min-height: 100%;
+}
+
+/* PLANO DE FUNDO DO SITE */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f0f4;
+  color: #4a4a4a;
+  padding: 30px 15px 0 15px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* EFEITOS GLOW DE DEGRADÊ */
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.glow-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: #f48fb1;
+  top: -50px;
+  right: -50px;
+}
+
+.shape-2 {
+  width: 250px;
+  height: 250px;
+  background: #ff80ab;
+  bottom: -50px;
+  left: -50px;
+}
+
+/* CONTAINER PRINCIPAL */
+.card3d {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 30px auto;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #d81b60;
+  font-weight: 700;
+}
+
+/* SEÇÕES TIPO CARD INDEPENDENTES NA TELA */
+.form-section-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(216, 27, 96, 0.08);
+  border: 1px solid #f8bbd0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(216, 27, 96, 0.12);
+}
+
+.highlight-card {
+  background: linear-gradient(185deg, #ffffff 0%, #fff0f5 100%);
+  border: 2px solid #f48fb1;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  color: #d81b60;
+  margin-bottom: 16px;
+  font-weight: 700;
+  border-bottom: 2px solid #fce4ec;
+  padding-bottom: 8px;
+}
+
+/* GRUPOS DE CAMPOS */
+.field-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #880e4f;
+  font-weight: 600;
+}
+
+label.required-label::after {
+  content: " *";
+  color: #d81b60;
+  font-weight: bold;
+}
+
+/* INPUTS DE FORMULÁRIO */
+input[type="date"], 
+input[type="text"], 
+input[type="tel"], 
+input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #f0c2d4;
+  background: #fafafa;
+  color: #4a4a4a;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #d81b60;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.15);
+}
+
+/* CHECKBOX DOMICÍLIO */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  color: #880e4f;
+  font-weight: 500;
+}
+
+.checkbox-group input {
+  accent-color: #d81b60;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* BOTÃO DE ABRIR MODAL DE SERVIÇOS */
+.btn-select-services {
+  width: 100%;
+  padding: 14px;
+  background-color: #ffffff;
+  border: 2px dashed #f48fb1;
+  color: #d81b60;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-select-services:hover {
+  background-color: #fce4ec;
+  border-color: #d81b60;
+}
+
+.selected-preview {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #880e4f;
+  font-weight: 600;
+  font-style: italic;
+  word-break: break-word;
+}
+
+/* MODAL DE SERVIÇOS */
+.services-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.services-modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 440px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.category-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #d81b60;
+  margin: 16px 0 8px 0;
+  letter-spacing: 0.5px;
+}
+
+.services-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.service-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #f0c2d4;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.service-option:has(input[type="checkbox"]:checked) {
+  border-color: #d81b60;
+  background-color: #fce4ec;
+}
+
+.service-option input[type="checkbox"] {
+  accent-color: #d81b60;
+  width: 18px;
+  height: 18px;
+}
+
+.service-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.service-price {
+  font-weight: 700;
+  color: #d81b60;
+}
+
+.btn-confirm-services {
+  width: 100%;
+  padding: 14px;
+  background: #d81b60;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* GRID DE HORÁRIOS */
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.time-placeholder {
+  grid-column: span 3;
+  font-size: 0.85rem;
+  color: #777777;
+  text-align: center;
+  padding: 8px;
+}
+
+.time-slot {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #f0c2d4;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  cursor: pointer;
+}
+
+.time-slot.selected {
+  background: #d81b60;
+  color: #ffffff;
+  border-color: #d81b60;
+}
+
+/* CAIXA DE PREÇO TOTAL */
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  border: 1px dashed #d81b60;
+  color: #880e4f;
+  font-weight: 600;
+}
+
+.price-box strong {
+  font-size: 1.4rem;
+  color: #d81b60;
+}
+
+/* BOTÃO DE ENVIAR */
+.btn-3d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: #d81b60;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(216, 27, 96, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-3d:hover {
+  background: #c2185b;
+  transform: translateY(-2px);
+}
+
+/* RODAPÉ ESTILO BANNER EM BLOCO COMPLETO (INSPIRADO NA IMAGEM) */
+.footer-block {
+  width: 100vw;
+  background-color: #ad1457;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.05);
+}
+
+.footer-subtext {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 5px;
+  font-weight: 400;
+}
